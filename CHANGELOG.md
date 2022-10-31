@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3-5](https://github.com/karlmarxlopez/deep-work-cli/compare/v0.0.3-2...v0.0.3-5) (2022-10-31)
+
+
+### Features
+
+* unblock -a command ([f717b08](https://github.com/karlmarxlopez/deep-work-cli/commit/f717b0845087e271d4af293cdacc25020f333320))
+* unblock [URL] command ([e19f618](https://github.com/karlmarxlopez/deep-work-cli/commit/e19f618ec385655e3f1c4d8ac0cc05cb845e9bc5))
+
+
+### Bug Fixes
+
+* add unblock command description ([14e5392](https://github.com/karlmarxlopez/deep-work-cli/commit/14e53929bc74d147f8116f4f872eae01c72a1456))
+* block should add marker comments ([5609a22](https://github.com/karlmarxlopez/deep-work-cli/commit/5609a2232b24a9748389465d426fe74dcb5c0190))
+
 ### [0.0.3-4](https://github.com/karlmarxlopez/deep-work-cli/compare/v0.0.3-2...v0.0.3-4) (2022-10-31)
 
 
