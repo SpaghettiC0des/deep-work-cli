@@ -1,5 +1,5 @@
 {
-  "name": "deep-work",
+  "name": "deep-work-cli",
   "version": "0.0.3-0",
   "description": "CLI tool to block websites when doing a deep work session",
   "author": "karlmarxlopez",

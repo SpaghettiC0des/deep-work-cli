@@ -13,11 +13,11 @@ deep-work-cli
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g deep-work
+$ npm install -g @kmlopez/deep-work-cli
 $ deep-work COMMAND
 running command...
 $ deep-work (--version)
-deep-work/0.0.3-0 darwin-arm64 node-v16.15.1
+@kmlopez/deep-work-cli/0.0.3-0 darwin-arm64 node-v16.15.1
 $ deep-work --help [COMMAND]
 USAGE
   $ deep-work COMMAND
