@@ -18,6 +18,10 @@ export async function processLineByLine(path: string, callback: (line: string) =
   return data;
 }
 
+export async function writeToHostsFile(data: string): Promise<void> {
+  await fs.promises.writeFile('/etc/hosts', data);
+}
+
 export async function removeAllBlockedWebsites(): Promise<void> {
   const start = /# deep-work-cli start/g;
   const end = /# deep-work-cli end/g;
@@ -37,5 +41,14 @@ export async function removeAllBlockedWebsites(): Promise<void> {
       started = false;
     }
   });
-  await fs.promises.writeFile('/etc/hosts', data);
+
+  await writeToHostsFile(data);
+}
+
+export async function removeOneUrl(url: string): Promise<void> {
+  let hosts = String(await fs.promises.readFile('/etc/hosts'));
+
+  for (const str of [`0.0.0.0 ${url}`, `:: ${url}`]) hosts = hosts.replace(str, '');
+
+  await writeToHostsFile(hosts);
 }

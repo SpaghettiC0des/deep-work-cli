@@ -1,5 +1,5 @@
 import {Command, Flags} from '@oclif/core';
-import {removeAllBlockedWebsites} from '../utils';
+import {removeAllBlockedWebsites, removeOneUrl} from '../utils';
 
 export default class Unblock extends Command {
   static description = 'describe the command here'
@@ -27,6 +27,11 @@ export default class Unblock extends Command {
         await removeAllBlockedWebsites();
         this.log('Unblocked all websites!');
         return;
+      }
+
+      if (args.url) {
+        await removeOneUrl(args.url);
+        this.log(`${args.url} unblocked!`);
       }
     } catch (error) {
       if (flags.all) {
