@@ -2,7 +2,7 @@ import {Command, Flags} from '@oclif/core';
 import {removeAllBlockedWebsites, removeOneUrl} from '../utils';
 
 export default class Unblock extends Command {
-  static description = 'describe the command here'
+  static description = 'removes one or all URLs'
 
   static examples = [
     '<%= config.bin %> <%= command.id %>',
