@@ -17,7 +17,7 @@ $ npm install -g deep-work-cli
 $ deep-work COMMAND
 running command...
 $ deep-work (--version)
-deep-work-cli/0.0.3-4 darwin-arm64 node-v16.15.1
+deep-work-cli/0.0.3-5 darwin-arm64 node-v16.15.1
 $ deep-work --help [COMMAND]
 USAGE
   $ deep-work COMMAND
@@ -54,7 +54,7 @@ EXAMPLES
   $ deep-work block www.google.com
 ```
 
-_See code: [dist/commands/block.ts](https://github.com/karlmarxlopez/deep-work-cli/blob/v0.0.3-4/dist/commands/block.ts)_
+_See code: [dist/commands/block.ts](https://github.com/karlmarxlopez/deep-work-cli/blob/v0.0.3-5/dist/commands/block.ts)_
 
 ## `deep-work help [COMMAND]`
 
@@ -308,7 +308,7 @@ DESCRIPTION
 
 ## `deep-work unblock [URL]`
 
-describe the command here
+removes one or all URLs
 
 ```
 USAGE
@@ -321,11 +321,11 @@ FLAGS
   -a, --all  remove all blocked websites
 
 DESCRIPTION
-  describe the command here
+  removes one or all URLs
 
 EXAMPLES
   $ deep-work unblock
 ```
 
-_See code: [dist/commands/unblock.ts](https://github.com/karlmarxlopez/deep-work-cli/blob/v0.0.3-4/dist/commands/unblock.ts)_
+_See code: [dist/commands/unblock.ts](https://github.com/karlmarxlopez/deep-work-cli/blob/v0.0.3-5/dist/commands/unblock.ts)_
 <!-- commandsstop -->
