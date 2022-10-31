@@ -1,13 +1,10 @@
 deep-work-cli
 =================
 
-oclif example Hello World CLI
-
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
-[![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
-[![Downloads/week](https://img.shields.io/npm/dw/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
-[![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
+[![Version](https://img.shields.io/npm/v/deep-work-cli.svg)](https://npmjs.org/package/deep-work-cli)
+[![Downloads/week](https://img.shields.io/npm/dw/deep-work-cli.svg)](https://npmjs.org/package/deep-work-cli)
+[![License](https://img.shields.io/npm/l/deep-work-cli.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -20,7 +17,7 @@ $ npm install -g deep-work
 $ deep-work COMMAND
 running command...
 $ deep-work (--version)
-deep-work/0.0.0 darwin-arm64 node-v16.15.1
+deep-work/0.0.3-0 darwin-arm64 node-v16.15.1
 $ deep-work --help [COMMAND]
 USAGE
   $ deep-work COMMAND
@@ -29,8 +26,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`deep-work hello PERSON`](#deep-work-hello-person)
-* [`deep-work hello world`](#deep-work-hello-world)
+* [`deep-work block URL`](#deep-work-block-url)
 * [`deep-work help [COMMAND]`](#deep-work-help-command)
 * [`deep-work plugins`](#deep-work-plugins)
 * [`deep-work plugins:install PLUGIN...`](#deep-work-pluginsinstall-plugin)
@@ -42,45 +38,22 @@ USAGE
 * [`deep-work plugins:uninstall PLUGIN...`](#deep-work-pluginsuninstall-plugin-2)
 * [`deep-work plugins update`](#deep-work-plugins-update)
 
-## `deep-work hello PERSON`
+## `deep-work block URL`
 
-Say hello
-
-```
-USAGE
-  $ deep-work hello [PERSON] -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Who is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [dist/commands/hello/index.ts](https://github.com/deep-work-cli/hello-world/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `deep-work hello world`
-
-Say hello world
+adds a website to the block list
 
 ```
 USAGE
-  $ deep-work hello world
+  $ deep-work block [URL]
 
 DESCRIPTION
-  Say hello world
+  adds a website to the block list
 
 EXAMPLES
-  $ deep-work hello world
-  hello world! (./src/commands/hello/world.ts)
+  $ deep-work block www.google.com
 ```
+
+_See code: [dist/commands/block.ts](https://github.com/karlmarxlopez/deep-work-cli/blob/v0.0.3-0/dist/commands/block.ts)_
 
 ## `deep-work help [COMMAND]`
 
@@ -100,7 +73,7 @@ DESCRIPTION
   Display help for deep-work.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.16/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.1.17/src/commands/help.ts)_
 
 ## `deep-work plugins`
 
@@ -120,7 +93,7 @@ EXAMPLES
   $ deep-work plugins
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.5/src/commands/plugins/index.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.1.6/src/commands/plugins/index.ts)_
 
 ## `deep-work plugins:install PLUGIN...`
 
