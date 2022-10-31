@@ -17,4 +17,12 @@ describe('unblock', () => {
   .it('should remove all blocked websites with -a flag', ctx => {
     expect(ctx.stdout).to.contain('Unblocked all websites!');
   });
+
+  test
+  .stub(utils, 'removeOneUrl', () => Promise.resolve())
+  .stdout()
+  .command(['unblock', 'youtube.com'])
+  .it('should be possible to remove one url only', ctx => {
+    expect(ctx.stdout).to.contain('youtube.com unblocked!');
+  });
 });
