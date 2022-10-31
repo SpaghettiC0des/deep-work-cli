@@ -1,6 +1,6 @@
 {
   "name": "deep-work",
-  "version": "0.0.0",
+  "version": "0.0.3-0",
   "description": "CLI tool to block websites when doing a deep work session",
   "author": "karlmarxlopez",
   "bin": {
@@ -37,6 +37,7 @@
     "mocha": "^9",
     "oclif": "^3",
     "shx": "^0.3.4",
+    "standard-version": "^9.5.0",
     "ts-node": "^10.9.1",
     "tslib": "^2.3.1",
     "typescript": "^4.8.4"
@@ -63,7 +64,8 @@
     "posttest": "yarn lint",
     "prepack": "yarn build && oclif manifest && oclif readme",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md"
+    "version": "oclif readme && git add README.md",
+    "release": "standard-version"
   },
   "engines": {
     "node": ">=12.0.0"
