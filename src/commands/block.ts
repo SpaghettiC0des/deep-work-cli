@@ -19,15 +19,19 @@ export default class Block extends Command {
       this.error(`invalid URL: ${args.url}.`, {exit: 100});
     }
 
-    const hosts = String(await fs.promises.readFile(this.hostFilePath));
+    let hosts = String(await fs.promises.readFile(this.hostFilePath));
     const firstLine = `0.0.0.0 ${args.url}`;
     const secondLine = `:: ${args.url}`;
+    const startComment = '# deep-work-cli start';
+    const endComment = '# deep-work-cli end';
 
     for (const str of [firstLine, secondLine]) {
       hosts.replace(new RegExp(`#?[ ]?${str}`, 'g'), '');
     }
 
-    await fs.promises.writeFile(this.hostFilePath, `${hosts}\n${firstLine}\n${secondLine}`);
+    hosts = hosts.replace(endComment, '');
+
+    await fs.promises.writeFile(this.hostFilePath, `${hosts}\n${hosts.includes(startComment) ? '' : startComment + '\n'}${firstLine}\n${secondLine}\n${endComment}\n`);
     sudo.exec('dscacheutil -flushcache; sudo killall -HUP mDNSResponder', {name: 'deep-work-cli'});
 
     this.log(`${args.url} added to the block list!`);
